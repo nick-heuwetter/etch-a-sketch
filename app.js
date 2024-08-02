@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector('#grid-container');
+const sizeBtn = document.querySelector('button')
 
 function makeGrid(num){
     for(let i = 0; i <= num; i++){
@@ -19,6 +20,18 @@ function makeGrid(num){
 
     }
 }
-0
+
+function changeSize(){
+    let sizeInput = prompt('Pick a size from 1 - 100:');
+    let sizeNumber = parseInt(sizeInput);
+    if (sizeNumber > 100 || sizeNumber <= 0){
+        alert('INVALID NUMBER')
+    } else {
+        gridContainer.innerHTML = '';
+        makeGrid(sizeNumber);
+    }   
+}
+
+sizeBtn.addEventListener('click', changeSize);
 
 makeGrid(16);
