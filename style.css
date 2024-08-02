@@ -1,4 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    background-color: gray;
+}
+
 #grid-container {
     height: 360px;
     width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-square {
+    background-color: white;
+    display: flex;
+    
 }
