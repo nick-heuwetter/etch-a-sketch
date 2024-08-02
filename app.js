@@ -14,7 +14,7 @@ function makeGrid(num){
             gridSquare.style.width = `${360/num}`+'px'
             row.appendChild(gridSquare);
             gridSquare.addEventListener('mouseenter', () => {
-                gridSquare.style.backgroundColor = 'black';
+                gridSquare.style.backgroundColor = getRandomColor();
             })        
         }
 
@@ -32,6 +32,14 @@ function changeSize(){
     }   
 }
 
+function getRandomColor(){
+    function getRandomNumber(){
+        let randNum = Math.floor(Math.random()*255);
+        return randNum;
+    }
+    return `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
+}
+
 sizeBtn.addEventListener('click', changeSize);
 
-makeGrid(16);
+makeGrid(64);
