@@ -2,8 +2,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 40px;
     background-color: gray;
+    flex-direction: column;
+}
+
+button {
+    display: flex;
+    align-self: center;
+    margin-bottom: 50px;
+    
 }
 
 #grid-container {
@@ -12,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .row {

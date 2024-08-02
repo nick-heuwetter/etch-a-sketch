@@ -19,5 +19,6 @@ function makeGrid(num){
 
     }
 }
+0
 
 makeGrid(16);
