@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: rgb(43, 39, 39);
     flex-direction: column;
 }
 
@@ -11,6 +11,14 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     gap: 5px;
+}
+
+button {
+    border-radius: 50px;
+}
+
+button:hover{
+    box-shadow: 0 0 10px 1px #ffd000;
 }
 
 #grid-container {
