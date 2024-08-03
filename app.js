@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector('#grid-container');
 const blackBtn = document.querySelector('#blackBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
+const clearBtn = document.querySelector('#clearBtn');
 
 function makeGridRainbow(num){
     for(let i = 0; i < num; i++){
@@ -36,7 +37,8 @@ function makeGridBlack(num){
             row.appendChild(gridSquare);
             gridSquare.addEventListener('mouseenter', () => {
                 gridSquare.style.backgroundColor = 'black';
-            })        
+            });
+                    
         }
 
     }
@@ -72,7 +74,14 @@ function getRandomColor(){
     return `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
 }
 
+function clear(){
+    document.querySelectorAll('.grid-square').forEach((square) => {
+        square.style.backgroundColor = 'white';
+    });
+}
+
 blackBtn.addEventListener('click', changeSizeBlack);
 rainbowBtn.addEventListener('click', changeSizeRainbow);
+clearBtn.addEventListener('click', clear);
 
 makeGridBlack(64);

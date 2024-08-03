@@ -55,7 +55,7 @@ button:hover{
     
 }
 
-@-webkit-keyframes rainbowdropshadow {
+@keyframes rainbowdropshadow {
     0% {
       box-shadow: 0 0 10px 1px #FF0000, 0 0 10px 1px #FF7F00, 0 0 10px 1px #FFFF00;
     }
