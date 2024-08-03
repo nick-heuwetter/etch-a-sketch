@@ -11,8 +11,8 @@ function makeGridRainbow(num){
         for(let j = 0; j < num; j++){
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('grid-square');
-            gridSquare.style.height = `${360/num}`+'px'
-            gridSquare.style.width = `${360/num}`+'px'
+            gridSquare.style.height = `${720/num}`+'px'
+            gridSquare.style.width = `${720/num}`+'px'
             row.appendChild(gridSquare);
             gridSquare.addEventListener('mouseenter', () => {
                 gridSquare.style.backgroundColor = getRandomColor();
@@ -31,8 +31,8 @@ function makeGridBlack(num){
         for(let j = 0; j < num; j++){
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('grid-square');
-            gridSquare.style.height = `${360/num}`+'px'
-            gridSquare.style.width = `${360/num}`+'px'
+            gridSquare.style.height = `${720/num}`+'px'
+            gridSquare.style.width = `${720/num}`+'px'
             row.appendChild(gridSquare);
             gridSquare.addEventListener('mouseenter', () => {
                 gridSquare.style.backgroundColor = 'black';

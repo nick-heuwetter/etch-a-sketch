@@ -15,15 +15,27 @@ body {
 
 button {
     border-radius: 50px;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 60px;
+    color: white;
 }
 
 button:hover{
-    box-shadow: 0 0 10px 1px #ffd000;
+    box-shadow: 0 0 10px 1px white;
+}
+
+#rainbowBtn:hover {
+    text-shadow: 1px 1px 0 #000000;
+  -webkit-animation: rainbowdropshadow .5s infinite;
+  animation: rainbowdropshadow .5s infinite;
 }
 
 #grid-container {
-    max-height: 360px;
-    max-width: 360px;
+    max-height: 720px;
+    max-width: 720px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,3 +51,45 @@ button:hover{
     display: flex;
     
 }
+
+@-webkit-keyframes rainbowdropshadow {
+    0% {
+      text-shadow: 1px 1px 0 #FF0000, 2px 2px 0 #FF7F00, 3px 3px 0 #FFFF00;
+    }
+    8% {
+      text-shadow: 1px 1px 0 #FF7F00, 2px 2px 0 #FFFF00, 3px 3px 0 #7FFF00;
+    }
+    16% {
+      text-shadow: 1px 1px 0 #FFFF00, 2px 2px 0 #7FFF00, 3px 3px 0 #00FF00;
+    }
+    25% {
+      text-shadow: 1px 1px 0 #7FFF00, 2px 2px 0 #00FF00, 3px 3px 0 #00FF7F;
+    }
+    33% {
+      text-shadow: 1px 1px 0 #00FF00, 2px 2px 0 #00FF7F, 3px 3px 0 #00FFFF;
+    }
+    41% {
+      text-shadow: 1px 1px 0 #00FF7F, 2px 2px 0 #00FFFF, 3px 3px 0 #007FFF;
+    }
+    50% {
+      text-shadow: 1px 1px 0 #00FFFF, 2px 2px 0 #007FFF, 3px 3px 0 #0000FF;
+    }
+    58% {
+      text-shadow: 1px 1px 0 #007FFF, 2px 2px 0 #0000FF, 3px 3px 0 #7F00FF;
+    }
+    66% {
+      text-shadow: 1px 1px 0 #0000FF, 2px 2px 0 #7F00FF, 3px 3px 0 #FF00FF;
+    }
+    75% {
+      text-shadow: 1px 1px 0 #7F00FF, 2px 2px 0 #FF00FF, 3px 3px 0 #FF007F;
+    }
+    83% {
+      text-shadow: 1px 1px 0 #FF00FF, 2px 2px 0 #FF007F, 3px 3px 0 #FF0000;
+    }
+    91% {
+      text-shadow: 1px 1px 0 #FF007F, 2px 2px 0 #FF0000, 3px 3px 0 #FF7F00;
+    }
+    100% {
+      text-shadow: 1px 1px 0 #FF0000, 2px 2px 0 #FF7F00, 3px 3px 0 #FFFF00;
+    }
+  }
