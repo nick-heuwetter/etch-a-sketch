@@ -2,6 +2,9 @@ const gridContainer = document.querySelector('#grid-container');
 const blackBtn = document.querySelector('#blackBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
 const clearBtn = document.querySelector('#clearBtn');
+const eraserBtn = document.querySelector('#eraserBtn');
+
+let isEraserActive = false;
 
 function makeGrid(num, colorFunction){
     gridContainer.innerHTML = '';
@@ -18,7 +21,11 @@ function makeGrid(num, colorFunction){
             gridSquare.style.width = `${720/num}`+'px'
             row.appendChild(gridSquare);
             gridSquare.addEventListener('mouseenter', () => {
+                if(isEraserActive) {
+                    gridSquare.style.backgroundColor = 'white';
+                } else{
                 gridSquare.style.backgroundColor = colorFunction();
+                }
             });        
         }
 
@@ -71,8 +78,14 @@ function clear(){
     });
 }
 
+function toggleEraser() {
+    isEraserActive = !isEraserActive;
+    eraserBtn.classList.toggle('active', isEraserActive);
+}
+
 blackBtn.addEventListener('click', changeSizeBlack);
 rainbowBtn.addEventListener('click', changeSizeRainbow);
 clearBtn.addEventListener('click', clear);
+eraserBtn.addEventListener('click', toggleEraser);
 
 makeGridBlack(64);
