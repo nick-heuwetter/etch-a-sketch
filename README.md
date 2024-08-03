@@ -1,0 +1,1 @@
+A etch-a-sketch app. Drag you mouse across the canvas to draw! Use the buttons up top to switch between color modes and choose your pen's size.
