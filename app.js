@@ -3,7 +3,9 @@ const blackBtn = document.querySelector('#blackBtn');
 const rainbowBtn = document.querySelector('#rainbowBtn');
 const clearBtn = document.querySelector('#clearBtn');
 
-function makeGridRainbow(num){
+function makeGrid(num, colorFunction){
+    gridContainer.innerHTML = '';
+    
     for(let i = 0; i < num; i++){
         const row = document.createElement('div');
         row.classList.add('row');
@@ -16,32 +18,19 @@ function makeGridRainbow(num){
             gridSquare.style.width = `${720/num}`+'px'
             row.appendChild(gridSquare);
             gridSquare.addEventListener('mouseenter', () => {
-                gridSquare.style.backgroundColor = getRandomColor();
-            })        
+                gridSquare.style.backgroundColor = colorFunction();
+            });        
         }
 
     }
 }
 
-function makeGridBlack(num){
-    for(let i = 0; i < num; i++){
-        const row = document.createElement('div');
-        row.classList.add('row');
-        gridContainer.appendChild(row);
-        
-        for(let j = 0; j < num; j++){
-            const gridSquare = document.createElement('div');
-            gridSquare.classList.add('grid-square');
-            gridSquare.style.height = `${720/num}`+'px'
-            gridSquare.style.width = `${720/num}`+'px'
-            row.appendChild(gridSquare);
-            gridSquare.addEventListener('mouseenter', () => {
-                gridSquare.style.backgroundColor = 'black';
-            });
-                    
-        }
+function makeGridBlack(num) {
+    makeGrid(num, () => 'black');
+}
 
-    }
+function makeGridRainbow(num) {
+    makeGrid(num, getRandomColor);
 }
 
 function changeSizeBlack(){
@@ -52,7 +41,6 @@ function changeSizeBlack(){
     } else if(sizeInput === ''){
         alert('INVALID NUMBER')
     } else {
-        gridContainer.innerHTML = '';
         makeGridBlack(sizeNumber);
     }   
 }
@@ -65,7 +53,6 @@ function changeSizeRainbow(){
     } else if(sizeInput === ''){
         alert('INVALID NUMBER')
     } else {
-        gridContainer.innerHTML = '';
         makeGridRainbow(sizeNumber);
     }   
 }
