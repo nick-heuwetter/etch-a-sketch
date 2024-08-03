@@ -28,7 +28,7 @@ button:hover{
 }
 
 #rainbowBtn:hover {
-    text-shadow: 1px 1px 0 #000000;
+    text-shadow: 0 0 10px 1px #000000;
   -webkit-animation: rainbowdropshadow .5s infinite;
   animation: rainbowdropshadow .5s infinite;
 }
@@ -39,6 +39,9 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 50px solid red;
+    box-shadow:0 9px 0 #9c0000, 9px 5px 0 #9c0000, 0 9px 0 #9c0000, 0 9px 0 #9c0000, -9px 5px 0 #9c0000;
+    border-radius: 50px;
 }
 
 .row {
@@ -54,42 +57,42 @@ button:hover{
 
 @-webkit-keyframes rainbowdropshadow {
     0% {
-      text-shadow: 1px 1px 0 #FF0000, 2px 2px 0 #FF7F00, 3px 3px 0 #FFFF00;
+      box-shadow: 0 0 10px 1px #FF0000, 0 0 10px 1px #FF7F00, 0 0 10px 1px #FFFF00;
     }
     8% {
-      text-shadow: 1px 1px 0 #FF7F00, 2px 2px 0 #FFFF00, 3px 3px 0 #7FFF00;
+      box-shadow: 0 0 10px 1px #FF7F00, 0 0 10px 1px #FFFF00, 0 0 10px 1px #7FFF00;
     }
     16% {
-      text-shadow: 1px 1px 0 #FFFF00, 2px 2px 0 #7FFF00, 3px 3px 0 #00FF00;
+      box-shadow: 0 0 10px 1px #FFFF00, 0 0 10px 1px #7FFF00, 0 0 10px 1px #00FF00;
     }
     25% {
-      text-shadow: 1px 1px 0 #7FFF00, 2px 2px 0 #00FF00, 3px 3px 0 #00FF7F;
+      box-shadow: 0 0 10px 1px #7FFF00, 0 0 10px 1px #00FF00, 0 0 10px 1px #00FF7F;
     }
     33% {
-      text-shadow: 1px 1px 0 #00FF00, 2px 2px 0 #00FF7F, 3px 3px 0 #00FFFF;
+      box-shadow: 0 0 10px 1px #00FF00, 0 0 10px 1px #00FF7F, 0 0 10px 1px #00FFFF;
     }
     41% {
-      text-shadow: 1px 1px 0 #00FF7F, 2px 2px 0 #00FFFF, 3px 3px 0 #007FFF;
+      box-shadow: 0 0 10px 1px #00FF7F, 0 0 10px 1px #00FFFF, 0 0 10px 1px #007FFF;
     }
     50% {
-      text-shadow: 1px 1px 0 #00FFFF, 2px 2px 0 #007FFF, 3px 3px 0 #0000FF;
+      box-shadow: 0 0 10px 1px #00FFFF, 0 0 10px 1px #007FFF, 0 0 10px 1px #0000FF;
     }
     58% {
-      text-shadow: 1px 1px 0 #007FFF, 2px 2px 0 #0000FF, 3px 3px 0 #7F00FF;
+      box-shadow: 0 0 10px 1px #007FFF, 0 0 10px 1px #0000FF, 0 0 10px 1px #7F00FF;
     }
     66% {
-      text-shadow: 1px 1px 0 #0000FF, 2px 2px 0 #7F00FF, 3px 3px 0 #FF00FF;
+      box-shadow: 0 0 10px 1px #0000FF, 0 0 10px 1px #7F00FF, 0 0 10px 1px #FF00FF;
     }
     75% {
-      text-shadow: 1px 1px 0 #7F00FF, 2px 2px 0 #FF00FF, 3px 3px 0 #FF007F;
+      box-shadow: 0 0 10px 1px #7F00FF, 0 0 10px 1px #FF00FF, 0 0 10px 1px #FF007F;
     }
     83% {
-      text-shadow: 1px 1px 0 #FF00FF, 2px 2px 0 #FF007F, 3px 3px 0 #FF0000;
+      box-shadow: 0 0 10px 1px #FF00FF, 0 0 10px 1px #FF007F, 0 0 10px 1px #FF0000;
     }
     91% {
-      text-shadow: 1px 1px 0 #FF007F, 2px 2px 0 #FF0000, 3px 3px 0 #FF7F00;
+      box-shadow: 0 0 10px 1px #FF007F, 0 0 10px 1px #FF0000, 0 0 10px 1px #FF7F00;
     }
     100% {
-      text-shadow: 1px 1px 0 #FF0000, 2px 2px 0 #FF7F00, 3px 3px 0 #FFFF00;
+      box-shadow: 0 0 10px 1px #FF0000, 0 0 10px 1px #FF7F00, 0 0 10px 1px #FFFF00;
     }
   }
