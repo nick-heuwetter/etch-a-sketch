@@ -6,11 +6,11 @@ body {
     flex-direction: column;
 }
 
-button {
+.button-container{
     display: flex;
-    align-self: center;
-    margin-bottom: 50px;
-    
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 5px;
 }
 
 #grid-container {

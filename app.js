@@ -1,7 +1,8 @@
 const gridContainer = document.querySelector('#grid-container');
-const sizeBtn = document.querySelector('button')
+const blackBtn = document.querySelector('#blackBtn');
+const rainbowBtn = document.querySelector('#rainbowBtn');
 
-function makeGrid(num){
+function makeGridRainbow(num){
     for(let i = 0; i < num; i++){
         const row = document.createElement('div');
         row.classList.add('row');
@@ -21,14 +22,45 @@ function makeGrid(num){
     }
 }
 
-function changeSize(){
-    let sizeInput = prompt('Pick a size from 1 - 100:');
+function makeGridBlack(num){
+    for(let i = 0; i < num; i++){
+        const row = document.createElement('div');
+        row.classList.add('row');
+        gridContainer.appendChild(row);
+        
+        for(let j = 0; j < num; j++){
+            const gridSquare = document.createElement('div');
+            gridSquare.classList.add('grid-square');
+            gridSquare.style.height = `${360/num}`+'px'
+            gridSquare.style.width = `${360/num}`+'px'
+            row.appendChild(gridSquare);
+            gridSquare.addEventListener('mouseenter', () => {
+                gridSquare.style.backgroundColor = 'black';
+            })        
+        }
+
+    }
+}
+
+function changeSizeBlack(){
+    let sizeInput = prompt('Pick a pen size from 1 - 100:');
     let sizeNumber = parseInt(sizeInput);
     if (sizeNumber > 100 || sizeNumber <= 0){
         alert('INVALID NUMBER');
     } else {
         gridContainer.innerHTML = '';
-        makeGrid(sizeNumber);
+        makeGridBlack(sizeNumber);
+    }   
+}
+
+function changeSizeRainbow(){
+    let sizeInput = prompt('Pick a pen size from 1 - 100:');
+    let sizeNumber = parseInt(sizeInput);
+    if (sizeNumber > 100 || sizeNumber <= 0){
+        alert('INVALID NUMBER');
+    } else {
+        gridContainer.innerHTML = '';
+        makeGridRainbow(sizeNumber);
     }   
 }
 
@@ -40,6 +72,7 @@ function getRandomColor(){
     return `rgb(${getRandomNumber()}, ${getRandomNumber()}, ${getRandomNumber()})`;
 }
 
-sizeBtn.addEventListener('click', changeSize);
+blackBtn.addEventListener('click', changeSizeBlack);
+rainbowBtn.addEventListener('click', changeSizeRainbow);
 
-makeGrid(64);
+makeGridBlack(64);
