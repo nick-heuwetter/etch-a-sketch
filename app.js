@@ -49,6 +49,8 @@ function changeSizeBlack(){
     let sizeNumber = parseInt(sizeInput);
     if (sizeNumber > 100 || sizeNumber <= 0){
         alert('INVALID NUMBER');
+    } else if(sizeInput === ''){
+        alert('INVALID NUMBER')
     } else {
         gridContainer.innerHTML = '';
         makeGridBlack(sizeNumber);
@@ -60,6 +62,8 @@ function changeSizeRainbow(){
     let sizeNumber = parseInt(sizeInput);
     if (sizeNumber > 100 || sizeNumber <= 0){
         alert('INVALID NUMBER');
+    } else if(sizeInput === ''){
+        alert('INVALID NUMBER')
     } else {
         gridContainer.innerHTML = '';
         makeGridRainbow(sizeNumber);
